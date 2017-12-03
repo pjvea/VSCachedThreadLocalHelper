@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'VSCachedThreadLocalHelper_Example' do
+  pod 'VSCachedThreadLocalHelper', :path => '../'
+
+  target 'VSCachedThreadLocalHelper_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
