@@ -1,0 +1,16 @@
+PODS:
+  - VSCachedThreadLocalHelper (0.1.0)
+
+DEPENDENCIES:
+  - VSCachedThreadLocalHelper (from `../`)
+
+EXTERNAL SOURCES:
+  VSCachedThreadLocalHelper:
+    :path: ../
+
+SPEC CHECKSUMS:
+  VSCachedThreadLocalHelper: 4936861810b75586fa289aaa990bacb6afe16f1f
+
+PODFILE CHECKSUM: be294e7cc0393900ee383c30b1dbe33caed2a0ec
+
+COCOAPODS: 1.3.1

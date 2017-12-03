@@ -1,15 +1,10 @@
 # VSCachedThreadLocalHelper
 
-[![CI Status](http://img.shields.io/travis/pjvea/VSCachedThreadLocalHelper.svg?style=flat)](https://travis-ci.org/pjvea/VSCachedThreadLocalHelper)
-[![Version](https://img.shields.io/cocoapods/v/VSCachedThreadLocalHelper.svg?style=flat)](http://cocoapods.org/pods/VSCachedThreadLocalHelper)
-[![License](https://img.shields.io/cocoapods/l/VSCachedThreadLocalHelper.svg?style=flat)](http://cocoapods.org/pods/VSCachedThreadLocalHelper)
-[![Platform](https://img.shields.io/cocoapods/p/VSCachedThreadLocalHelper.svg?style=flat)](http://cocoapods.org/pods/VSCachedThreadLocalHelper)
+VSCachedThreadLocalHelper is a helper class that creates cached thread local objects. It is most commonly used for DateFormatters. That way your DateFormatters don't have to be reallocated every time you want to use them.
 
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
 
 ## Installation
 
@@ -20,9 +15,25 @@ it, simply add the following line to your Podfile:
 pod 'VSCachedThreadLocalHelper'
 ```
 
+## Usage
+
+This is most comonnly used to create DateFormatters.
+
+```
+func getHoursMinutesPeriodDateFormatter() -> DateFormatter {
+    return VSCachedThreadLocalHelper.cachedThreadLocalObjectWithKey(key: "HoursMinutesPeriodDateFormatter") {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm a"
+        return dateFormatter
+    }
+}
+```
+
 ## Author
 
-pjvea, pj@veasoftware.com
+PJ Vea, @pjvea
+
+Vea Software LLC
 
 ## License
 

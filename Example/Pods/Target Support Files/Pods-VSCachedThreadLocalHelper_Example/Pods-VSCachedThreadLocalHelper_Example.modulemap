@@ -1,0 +1,6 @@
+framework module Pods_VSCachedThreadLocalHelper_Example {
+  umbrella header "Pods-VSCachedThreadLocalHelper_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

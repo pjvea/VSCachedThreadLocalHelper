@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import VSCachedThreadLocalHelper
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let dateFormatter = self.getHoursMinutesPeriodDateFormatter()
+        print(dateFormatter.string(from: Date()))
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,5 +23,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    private func getHoursMinutesPeriodDateFormatter() -> DateFormatter {
+        return VSCachedThreadLocalHelper.cachedThreadLocalObjectWithKey(key: "HoursMinutesPeriodDateFormatter") {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "h:mm a"
+            return dateFormatter
+        }
+    }
 }
 

@@ -1,0 +1,6 @@
+framework module VSCachedThreadLocalHelper {
+  umbrella header "VSCachedThreadLocalHelper-umbrella.h"
+
+  export *
+  module * { export * }
+}

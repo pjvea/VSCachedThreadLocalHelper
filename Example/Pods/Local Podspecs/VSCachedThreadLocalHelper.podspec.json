@@ -1,0 +1,22 @@
+{
+  "name": "VSCachedThreadLocalHelper",
+  "version": "0.1.0",
+  "summary": "A short description of VSCachedThreadLocalHelper.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/pjvea/VSCachedThreadLocalHelper",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "pjvea": "pj@veasoftware.com"
+  },
+  "source": {
+    "git": "https://github.com/pjvea/VSCachedThreadLocalHelper.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "VSCachedThreadLocalHelper/Classes/**/*"
+}

@@ -1,0 +1,6 @@
+framework module Pods_VSCachedThreadLocalHelper_Tests {
+  umbrella header "Pods-VSCachedThreadLocalHelper_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
